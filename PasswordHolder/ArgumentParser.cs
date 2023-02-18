@@ -12,6 +12,8 @@ namespace PasswordHolder
         public static int DelAcc = 2;
         public static int DelWeb = 1;
         public static int Search = 1;
+        public static int Help = 0;
+        public static int Show = 0;
     }
     internal static class ArgumentParser
     {
@@ -59,6 +61,12 @@ namespace PasswordHolder
                     break;
                 case "search":
                     if (argnum != ActionArgNums.Search) throw new ArgumentException("Search requires SiteName.");
+                    break;
+                case "help":
+                    if (argnum != ActionArgNums.Help) throw new ArgumentException("Show requires nothing.");
+                    break;
+                case "show":
+                    if (argnum != ActionArgNums.Show) throw new ArgumentException("Show requires nothing.");
                     break;
                 default:
                     throw new NotSupportedException();

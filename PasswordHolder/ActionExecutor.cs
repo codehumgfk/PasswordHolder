@@ -49,6 +49,9 @@ namespace PasswordHolder
                 case "help":
                     Console.WriteLine(HelpText);
                     break;
+                case "show":
+                    Console.WriteLine(string.Join("\n", Result.Select(wa => wa.ToString()).ToArray()));
+                    break;
                 default:
                     throw new NotSupportedException();
             }
