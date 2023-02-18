@@ -24,7 +24,7 @@ namespace PasswordHolder
             for (var i = 0; i < actions.Count; i++)
             {
                 var start = actions[i];
-                var end = i != actions.Count - 1 ? actions[i + 1] : args.Length - 1;
+                var end = i != actions.Count - 1 ? actions[i + 1] - 1 : args.Length - 1;
                 CheckActionArguments(args, start, end);
                 var temp = new string[end - start + 1];
                 Array.Copy(args, start, temp, 0, temp.Length);
