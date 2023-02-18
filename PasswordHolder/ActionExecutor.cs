@@ -12,7 +12,7 @@ namespace PasswordHolder
     {
         public IEnumerable<WebAccountPOCO> Original;
         public IEnumerable<WebAccount> Result;
-        public static string HelpText = "--add SiteName Id Pass\n--delacc SiteName Id\n--delweb SiteName\n--search SiteName\n--help";
+        public static string HelpText = "--add SiteName Id Pass\n--delacc SiteName Id\n--delweb SiteName\n--search SiteName\n--help\n--show";
 
         public ActionExecutor(IEnumerable<WebAccountPOCO> original)
         { 
