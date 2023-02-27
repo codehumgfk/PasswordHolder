@@ -44,13 +44,13 @@ namespace PasswordHolder
                     Result = WebAccountUtil.DeleteWebAccout(Result, args[0]);
                     break;
                 case "search":
-                    Console.WriteLine(string.Join("\n", WebAccountUtil.SearchAccounts(Result, args[0]).Select(wa => wa.ToString()).ToArray()));
+                    Console.WriteLine(string.Join("\n", WebAccountUtil.SearchAccounts(Result, args[0]).OrderBy(wa => wa.SiteName).Select(wa => wa.ToString()).ToArray()));
                     break;
                 case "help":
                     Console.WriteLine(HelpText);
                     break;
                 case "show":
-                    Console.WriteLine(string.Join("\n", Result.Select(wa => wa.ToString()).ToArray()));
+                    Console.WriteLine(string.Join("\n", Result.OrderBy(wa => wa.SiteName).Select(wa => wa.ToString()).ToArray()));
                     break;
                 default:
                     throw new NotSupportedException();
